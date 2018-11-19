@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+<div th:fragment="nav(text)" class="mdui-appbar   mdui-appbar-fixed mdui-appbar-scroll-hide">
+    <div class="mdui-toolbar mdui-container toolbar">
+        <a href="/" class="mdui-typo-headline logo">MORRLE</a>
+        <div class="menu">
+            <ul class="">
+                <li th:class="${text=='首页'}?'active'"><a href="/"><i class="fa fa-home" aria-hidden="true"></i>首页</a></li>
+                <li th:class="${text=='归档'}?'active'"><a href=""><i class="fa fa-archive " aria-hidden="true"></i>归档</a></li>
+                <li th:class="${text=='关于'}?'active'"><a href=""><i class="fa fa-inbox" aria-hidden="true"></i>关于</a></li>
+            </ul>
+        </div>
+        <div class="mdui-toolbar-spacer"></div>
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">refresh</i></a>
+        <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">more_vert</i></a>
+    </div>
+</div>
+
+</body>
+</html>

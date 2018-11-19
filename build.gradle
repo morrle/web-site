@@ -1,0 +1,52 @@
+plugins {
+    id 'java'
+    id 'net.ltgt.apt' version '0.10'
+}
+
+group 'com.morrle'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8//新增
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'io.vertx:vertx-core:3.5.4'
+    compile 'io.vertx:vertx-web:3.5.4'
+    compile 'io.vertx:vertx-web-templ-thymeleaf:3.5.4'
+    compile 'io.vertx:vertx-mongo-client:3.5.4'
+    compile 'org.slf4j:slf4j-jdk14:1.7.25'
+
+    compile 'com.lmax:disruptor:3.3.5'
+    compile 'org.apache.logging.log4j:log4j-1.2-api:2.7'
+    compile 'org.apache.logging.log4j:log4j-jcl:2.7'
+    compile 'org.apache.logging.log4j:log4j-jul:2.7'
+
+    /*markdown转html*/
+    compile 'com.atlassian.commonmark:commonmark:0.11.0'
+    compile 'com.atlassian.commonmark:commonmark-ext-gfm-tables:0.11.0'
+
+    /*过滤 emoji 字符*/
+    compile 'com.vdurmont:emoji-java:4.0.0'
+
+    /*lombok*/
+    compileOnly 'org.projectlombok:lombok:1.18.4'
+    apt 'org.projectlombok:lombok:1.18.4'
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+//以下部分新增
+jar {
+    manifest {
+        attributes "Main-Class": "com.morrle.Launcher"//指定main函数所在的类
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}

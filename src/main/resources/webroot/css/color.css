@@ -1,0 +1,11 @@
+.mdui-color-theme{
+    background: rgba(65, 105, 225, 0.85) !important;
+    color: #fff!important;
+}
+.mdui-color-theme-accent{
+    color: #fff!important;
+    background-color: rgba(65, 105, 225, 0.7) !important;
+}
+.mdui-toolbar{
+    background: #fff;
+}

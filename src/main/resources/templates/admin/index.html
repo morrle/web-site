@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/templates/admin/component/header.html :: header('管理中心')">
+</head>
+<body class="mdui-drawer-body-left mdui-appbar-with-toolbar  mdui-loaded">
+<div th:replace="/templates/admin/component/nav.html ::nav('首页')"></div>
+<div th:replace="/templates/admin/component/drawer.html :: drawer"></div>
+<div class="mdui-container container">
+
+    <div th:replace="/templates/admin/component/article-edit.html :: content"></div>
+
+
+</div>
+</body>
+</html>

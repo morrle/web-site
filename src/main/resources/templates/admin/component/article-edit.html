@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>文章编辑</title>
+</head>
+<body>
+
+<div th:fragment="content">
+    <link rel="stylesheet" href="/static/plugins/editor.md/css/editormd.min.css">
+
+    <form class="form" id="form">
+        <div class="form-item">
+            <div class="mdui-textfield mdui-textfield-floating-label">
+                <label class="mdui-textfield-label">文章标题</label>
+                <input class="mdui-textfield-input" type="text"/>
+            </div>
+        </div>
+
+        <div class="form-item">
+
+            <div class="mdui-textfield mdui-textfield-floating-label">
+                <select  class="mdui-select" mdui-select="{position:'top'}">
+                    <option value="1">State 1</option>
+                    <option value="2">State 2</option>
+                    <option value="3" disabled>State 3</option>
+                    <option value="4">State 4</option>
+                    <option value="5">State 5</option>
+                    <option value="6">State 6</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="editormd">
+            <textarea style="display:none;" title="">### Hello Editor.md !</textarea>
+        </div>
+    </form>
+
+    <script src="/static/plugins/zepto/zepto.min.js"></script>
+    <script src="/static/plugins/editor.md/editormd.min.js"></script>
+    <script>
+        $(function () {
+            var editor = editormd({
+                id: "editormd",
+                height: 640,
+                path: "/static/plugins/editor.md/lib/"
+            })
+        });
+    </script>
+</div>
+
+</body>
+</html>

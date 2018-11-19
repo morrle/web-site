@@ -1,0 +1,14 @@
+.container {
+    margin-top: 20px;
+}
+.form .form-item{
+    display: flex;
+    display: -webkit-flex;
+    margin-bottom: 10px;
+}
+.form .form-item .mdui-textfield{
+    flex: 1;
+}
+.mdui-select-menu-item{
+    z-index: 9999;
+}

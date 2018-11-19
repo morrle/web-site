@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+<div th:fragment="drawer" class="mdui-drawer" id="main-drawer">
+    <div class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 76px;">
+
+        <div class="mdui-collapse-item mdui-collapse-item-open">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">widgets</i>
+                <div class="mdui-list-item-content">文章管理</div>
+                <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list" style="height: auto;">
+                <a href="./download" class="mdui-list-item mdui-ripple mdui-list-item-active">发布文章</a>
+                <a href="./compatibility" class="mdui-list-item mdui-ripple ">管理文章</a>
+                <a href="./global" class="mdui-list-item mdui-ripple ">分类/标签</a>
+            </div>
+        </div>
+
+        <div class="mdui-collapse-item ">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">local_mall</i>
+                <div class="mdui-list-item-content">资源</div>
+                <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list">
+                <a href="./material_icon" class="mdui-list-item mdui-ripple ">Material 图标</a>
+            </div>
+        </div>
+
+        <div class="mdui-collapse-item ">
+            <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+                <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">near_me</i>
+                <div class="mdui-list-item-content">系统设置</div>
+                <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+            </div>
+            <div class="mdui-collapse-item-body mdui-list">
+                <a href="./download" class="mdui-list-item mdui-ripple ">发布文章</a>
+                <a href="./compatibility" class="mdui-list-item mdui-ripple ">管理文章</a>
+                <a href="./global" class="mdui-list-item mdui-ripple ">分类/标签</a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
