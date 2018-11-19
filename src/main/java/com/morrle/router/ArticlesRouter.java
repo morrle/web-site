@@ -7,6 +7,11 @@ import io.vertx.ext.web.templ.ThymeleafTemplateEngine;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+/**
+ * @author morrle
+ * @date 2018/11/19 17:27
+ * ArticleRouter
+ **/
 public class ArticlesRouter {
     private static final Logger logger = LogManager.getLogger();
 
